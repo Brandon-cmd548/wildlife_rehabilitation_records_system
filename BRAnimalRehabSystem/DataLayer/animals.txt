@@ -1,1 +1,10 @@
-﻿
+﻿WR-0001|Jordan|African Penguin|4|15|Critical|Intensive Care Unit
+WR-0002|Thabo|Cape Vulture|6|18|Critical|Intensive Care Unit
+WR-0003|Kaya|Serval|3|25|Serious|High-Dependency Ward
+WR-0004|Milo|Caracal|5|35|Serious|High-Dependency Ward
+WR-0005|Zuri|Meerkat|2|50|Stable|Recovery Ward
+WR-0006|Leo|African Wildcat|7|55|Stable|Recovery Ward
+WR-0007|Nia|Crowned Eagle|4|65|Recovering|Outdoor Enclosure
+WR-0008|Biko|Honey Badger|8|75|Recovering|Outdoor Enclosure
+WR-0009|Tala|Springbok|3|85|Release-Ready|Pre-Release Camp
+WR-0010|Jabari|African Otter|5|95|Release-Ready|Pre-Release Camp

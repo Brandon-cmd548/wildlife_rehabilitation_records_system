@@ -8,5 +8,6 @@ namespace BRAnimalRehabSystem.ApplicationLogic
 {
     internal class AnimalClassification
     {
+        
     }
 }
