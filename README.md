@@ -85,19 +85,6 @@ The project follows a clean **Layered Architecture**:
 
 ---
 
-## Branching Strategy & Workflow
-The project follows a **Feature-Branch Workflow**.
-
-* **`main` Branch:** Contains stable and tested code only.
-* **Feature Branches:**
-  * `feature-add-animal`
-  * `feature-search-update`
-  * `feature-delete-summary`
-
-> All development is performed on feature branches and merged into `main` via Pull Requests.
-
----
-
 ## Development Standards
 - Meaningful commit messages
 - Pull Requests required prior to merging
