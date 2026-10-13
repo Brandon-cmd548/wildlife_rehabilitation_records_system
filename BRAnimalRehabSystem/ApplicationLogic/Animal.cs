@@ -8,7 +8,7 @@ namespace BRAnimalRehabSystem.ApplicationLogic
 {
     internal class Animal
     {
-        private string AnimalID { get; set; }
+        public string AnimalID { get; set; }
         private string AnimalName { get; set; }
         private string AnimalSpecies { get; set; }
         private int AnimalAge { get; set; }
