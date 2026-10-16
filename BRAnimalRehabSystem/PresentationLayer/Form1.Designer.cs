@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             lblTitle = new Label();
-            lblSeperate1 = new Label();
-            lblAnimalID = new Label();
-            lblName = new Label();
-            lblSpecies = new Label();
-            lblAge = new Label();
-            lblRecoveryScore = new Label();
-            txtName = new TextBox();
-            txtSpecies = new TextBox();
-            txtAge = new TextBox();
-            txtRecoveryScore = new TextBox();
             btnAdd = new Button();
             btnUpdate = new Button();
             btnDelete = new Button();
@@ -46,20 +36,8 @@
             lblSearchAnimalID = new Label();
             textBox1 = new TextBox();
             btnSearch = new Button();
-            lblAnimalRecords = new Label();
-            lblSeperate2 = new Label();
-            dataGridView1 = new DataGridView();
-            lblStatistics = new Label();
-            lblSeperate3 = new Label();
-            lblStatisticTotalAnimals = new Label();
-            lblStatisticAverageAge = new Label();
-            lblStatisticAverageRecoveryScore = new Label();
-            outputStatisticTotalAnimals = new Label();
-            outputStatisticAverageAge = new Label();
-            outputStatisticAverageScore = new Label();
-            btnGenerateSummary = new Button();
-            outputAnimalID = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnStatistics = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -72,121 +50,39 @@
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Baobab Ridge Wildlife Rehabilitation Records System";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
-
-            // 
-            // lblSeperate1
-            // 
-            lblSeperate1.AutoSize = true;
-            lblSeperate1.Location = new Point(1, 44);
-            lblSeperate1.Name = "lblSeperate1";
-            lblSeperate1.Size = new Size(957, 20);
-            lblSeperate1.TabIndex = 1;
-            lblSeperate1.Text = "--------------------------------------------------------------------------------------------------------------------------------------------------------------";
-            // 
-            // lblAnimalID
-            // 
-            lblAnimalID.AutoSize = true;
-            lblAnimalID.Location = new Point(12, 64);
-            lblAnimalID.Name = "lblAnimalID";
-            lblAnimalID.Size = new Size(78, 20);
-            lblAnimalID.TabIndex = 2;
-            lblAnimalID.Text = "Animal ID:";
-            // 
-            // lblName
-            // 
-            lblName.AutoSize = true;
-            lblName.Location = new Point(12, 96);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(52, 20);
-            lblName.TabIndex = 3;
-            lblName.Text = "Name:";
-            // 
-            // lblSpecies
-            // 
-            lblSpecies.AutoSize = true;
-            lblSpecies.Location = new Point(12, 128);
-            lblSpecies.Name = "lblSpecies";
-            lblSpecies.Size = new Size(62, 20);
-            lblSpecies.TabIndex = 4;
-            lblSpecies.Text = "Species:";
-            // 
-            // lblAge
-            // 
-            lblAge.AutoSize = true;
-            lblAge.Location = new Point(12, 162);
-            lblAge.Name = "lblAge";
-            lblAge.Size = new Size(39, 20);
-            lblAge.TabIndex = 5;
-            lblAge.Text = "Age:";
-            // 
-            // lblRecoveryScore
-            // 
-            lblRecoveryScore.AutoSize = true;
-            lblRecoveryScore.Location = new Point(12, 198);
-            lblRecoveryScore.Name = "lblRecoveryScore";
-            lblRecoveryScore.Size = new Size(113, 20);
-            lblRecoveryScore.TabIndex = 6;
-            lblRecoveryScore.Text = "Recovery Score:";
-            // 
-            // txtName
-            // 
-            txtName.Location = new Point(169, 93);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(125, 27);
-            txtName.TabIndex = 8;
-            // 
-            // txtSpecies
-            // 
-            txtSpecies.Location = new Point(169, 125);
-            txtSpecies.Name = "txtSpecies";
-            txtSpecies.Size = new Size(125, 27);
-            txtSpecies.TabIndex = 9;
-            // 
-            // txtAge
-            // 
-            txtAge.Location = new Point(169, 159);
-            txtAge.Name = "txtAge";
-            txtAge.Size = new Size(125, 27);
-            txtAge.TabIndex = 10;
-            // 
-            // txtRecoveryScore
-            // 
-            txtRecoveryScore.Location = new Point(169, 195);
-            txtRecoveryScore.Name = "txtRecoveryScore";
-            txtRecoveryScore.Size = new Size(125, 27);
-            txtRecoveryScore.TabIndex = 11;
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(12, 243);
+            btnAdd.Location = new Point(18, 80);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(94, 29);
+            btnAdd.Size = new Size(121, 84);
             btnAdd.TabIndex = 12;
-            btnAdd.Text = "Add";
+            btnAdd.Text = "Add Animal";
             btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(112, 243);
+            btnUpdate.Location = new Point(145, 80);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(94, 29);
+            btnUpdate.Size = new Size(121, 84);
             btnUpdate.TabIndex = 13;
-            btnUpdate.Text = "Update";
+            btnUpdate.Text = "Update Animal";
             btnUpdate.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(212, 243);
+            btnDelete.Location = new Point(272, 80);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(94, 29);
+            btnDelete.Size = new Size(121, 84);
             btnDelete.TabIndex = 14;
-            btnDelete.Text = "Delete";
+            btnDelete.Text = "Delete Animal";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // lblSearch
             // 
             lblSearch.AutoSize = true;
-            lblSearch.Location = new Point(683, 61);
+            lblSearch.Location = new Point(673, 77);
             lblSearch.Name = "lblSearch";
             lblSearch.Size = new Size(127, 20);
             lblSearch.TabIndex = 15;
@@ -195,7 +91,7 @@
             // lblSearchAnimalID
             // 
             lblSearchAnimalID.AutoSize = true;
-            lblSearchAnimalID.Location = new Point(599, 96);
+            lblSearchAnimalID.Location = new Point(589, 112);
             lblSearchAnimalID.Name = "lblSearchAnimalID";
             lblSearchAnimalID.Size = new Size(78, 20);
             lblSearchAnimalID.TabIndex = 16;
@@ -203,158 +99,45 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(683, 93);
+            textBox1.Location = new Point(673, 109);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(127, 27);
             textBox1.TabIndex = 17;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(816, 91);
+            btnSearch.Location = new Point(806, 107);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(94, 29);
             btnSearch.TabIndex = 18;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
             // 
-            // lblAnimalRecords
+            // btnStatistics
             // 
-            lblAnimalRecords.AutoSize = true;
-            lblAnimalRecords.Font = new Font("Segoe UI", 15F);
-            lblAnimalRecords.Location = new Point(384, 288);
-            lblAnimalRecords.Name = "lblAnimalRecords";
-            lblAnimalRecords.Size = new Size(188, 35);
-            lblAnimalRecords.TabIndex = 19;
-            lblAnimalRecords.Text = "Animal Records";
+            btnStatistics.Location = new Point(399, 80);
+            btnStatistics.Name = "btnStatistics";
+            btnStatistics.Size = new Size(121, 84);
+            btnStatistics.TabIndex = 22;
+            btnStatistics.Text = "Statistics";
+            btnStatistics.UseVisualStyleBackColor = true;
             // 
-            // lblSeperate2
+            // label1
             // 
-            lblSeperate2.AutoSize = true;
-            lblSeperate2.Location = new Point(1, 323);
-            lblSeperate2.Name = "lblSeperate2";
-            lblSeperate2.Size = new Size(957, 20);
-            lblSeperate2.TabIndex = 20;
-            lblSeperate2.Text = "--------------------------------------------------------------------------------------------------------------------------------------------------------------";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(184, 346);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(570, 191);
-            dataGridView1.TabIndex = 21;
-            // 
-            // lblStatistics
-            // 
-            lblStatistics.AutoSize = true;
-            lblStatistics.Font = new Font("Segoe UI", 15F);
-            lblStatistics.Location = new Point(419, 549);
-            lblStatistics.Name = "lblStatistics";
-            lblStatistics.Size = new Size(110, 35);
-            lblStatistics.TabIndex = 22;
-            lblStatistics.Text = "Statistics";
-            // 
-            // lblSeperate3
-            // 
-            lblSeperate3.AutoSize = true;
-            lblSeperate3.Location = new Point(1, 584);
-            lblSeperate3.Name = "lblSeperate3";
-            lblSeperate3.Size = new Size(957, 20);
-            lblSeperate3.TabIndex = 23;
-            lblSeperate3.Text = "--------------------------------------------------------------------------------------------------------------------------------------------------------------";
-
-            // 
-            // lblStatisticTotalAnimals
-            // 
-            lblStatisticTotalAnimals.AutoSize = true;
-            lblStatisticTotalAnimals.Location = new Point(12, 617);
-            lblStatisticTotalAnimals.Name = "lblStatisticTotalAnimals";
-            lblStatisticTotalAnimals.Size = new Size(102, 20);
-            lblStatisticTotalAnimals.TabIndex = 24;
-            lblStatisticTotalAnimals.Text = "Total Animals:";
-            // 
-            // lblStatisticAverageAge
-            // 
-            lblStatisticAverageAge.AutoSize = true;
-            lblStatisticAverageAge.Location = new Point(14, 664);
-            lblStatisticAverageAge.Name = "lblStatisticAverageAge";
-            lblStatisticAverageAge.Size = new Size(98, 20);
-            lblStatisticAverageAge.TabIndex = 25;
-            lblStatisticAverageAge.Text = "Average Age:";
-            // 
-            // lblStatisticAverageRecoveryScore
-            // 
-            lblStatisticAverageRecoveryScore.AutoSize = true;
-            lblStatisticAverageRecoveryScore.Location = new Point(14, 710);
-            lblStatisticAverageRecoveryScore.Name = "lblStatisticAverageRecoveryScore";
-            lblStatisticAverageRecoveryScore.Size = new Size(172, 20);
-            lblStatisticAverageRecoveryScore.TabIndex = 26;
-            lblStatisticAverageRecoveryScore.Text = "Average Recovery Score:";
-            // 
-            // outputStatisticTotalAnimals
-            // 
-            outputStatisticTotalAnimals.AutoSize = true;
-            outputStatisticTotalAnimals.Location = new Point(232, 617);
-            outputStatisticTotalAnimals.Name = "outputStatisticTotalAnimals";
-            outputStatisticTotalAnimals.Size = new Size(17, 20);
-            outputStatisticTotalAnimals.TabIndex = 27;
-            outputStatisticTotalAnimals.Text = "0";
-            // 
-            // outputStatisticAverageAge
-            // 
-            outputStatisticAverageAge.AutoSize = true;
-            outputStatisticAverageAge.Location = new Point(232, 664);
-            outputStatisticAverageAge.Name = "outputStatisticAverageAge";
-            outputStatisticAverageAge.Size = new Size(17, 20);
-            outputStatisticAverageAge.TabIndex = 28;
-            outputStatisticAverageAge.Text = "0";
-            // 
-            // outputStatisticAverageScore
-            // 
-            outputStatisticAverageScore.AutoSize = true;
-            outputStatisticAverageScore.Location = new Point(232, 710);
-            outputStatisticAverageScore.Name = "outputStatisticAverageScore";
-            outputStatisticAverageScore.Size = new Size(17, 20);
-            outputStatisticAverageScore.TabIndex = 29;
-            outputStatisticAverageScore.Text = "0";
-            // 
-            // btnGenerateSummary
-            // 
-            btnGenerateSummary.Location = new Point(14, 742);
-            btnGenerateSummary.Name = "btnGenerateSummary";
-            btnGenerateSummary.Size = new Size(235, 29);
-            btnGenerateSummary.TabIndex = 30;
-            btnGenerateSummary.Text = "Generate Summary";
-            btnGenerateSummary.UseVisualStyleBackColor = true;
-            // 
-            // outputAnimalID
-            // 
-            outputAnimalID.AutoSize = true;
-            outputAnimalID.Location = new Point(169, 64);
-            outputAnimalID.Name = "outputAnimalID";
-            outputAnimalID.Size = new Size(150, 20);
-            outputAnimalID.TabIndex = 31;
-            outputAnimalID.Text = "{ID will Appear Here}";
+            label1.AutoSize = true;
+            label1.Location = new Point(-7, 44);
+            label1.Name = "label1";
+            label1.Size = new Size(957, 20);
+            label1.TabIndex = 23;
+            label1.Text = "--------------------------------------------------------------------------------------------------------------------------------------------------------------";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(952, 783);
-            Controls.Add(outputAnimalID);
-            Controls.Add(btnGenerateSummary);
-            Controls.Add(outputStatisticAverageScore);
-            Controls.Add(outputStatisticAverageAge);
-            Controls.Add(outputStatisticTotalAnimals);
-            Controls.Add(lblStatisticAverageRecoveryScore);
-            Controls.Add(lblStatisticAverageAge);
-            Controls.Add(lblStatisticTotalAnimals);
-            Controls.Add(lblSeperate3);
-            Controls.Add(lblStatistics);
-            Controls.Add(dataGridView1);
-            Controls.Add(lblSeperate2);
-            Controls.Add(lblAnimalRecords);
+            ClientSize = new Size(952, 192);
+            Controls.Add(label1);
+            Controls.Add(btnStatistics);
             Controls.Add(btnSearch);
             Controls.Add(textBox1);
             Controls.Add(lblSearchAnimalID);
@@ -362,21 +145,9 @@
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnAdd);
-            Controls.Add(txtRecoveryScore);
-            Controls.Add(txtAge);
-            Controls.Add(txtSpecies);
-            Controls.Add(txtName);
-            Controls.Add(lblRecoveryScore);
-            Controls.Add(lblAge);
-            Controls.Add(lblSpecies);
-            Controls.Add(lblName);
-            Controls.Add(lblAnimalID);
-            Controls.Add(lblSeperate1);
             Controls.Add(lblTitle);
             Name = "Form1";
             Text = "Form1";
-
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -384,16 +155,6 @@
         #endregion
 
         private Label lblTitle;
-        private Label lblSeperate1;
-        private Label lblAnimalID;
-        private Label lblName;
-        private Label lblSpecies;
-        private Label lblAge;
-        private Label lblRecoveryScore;
-        private TextBox txtName;
-        private TextBox txtSpecies;
-        private TextBox txtAge;
-        private TextBox txtRecoveryScore;
         private Button btnAdd;
         private Button btnUpdate;
         private Button btnDelete;
@@ -401,19 +162,8 @@
         private Label lblSearchAnimalID;
         private TextBox textBox1;
         private Button btnSearch;
-        private Label lblAnimalRecords;
-        private Label lblSeperate2;
-        private DataGridView dataGridView1;
-        private Label lblStatistics;
-        private Label lblSeperate3;
-        private Label lblStatisticTotalAnimals;
-        private Label lblStatisticAverageAge;
-        private Label lblStatisticAverageRecoveryScore;
-        private Label outputStatisticTotalAnimals;
-        private Label outputStatisticAverageAge;
-        private Label outputStatisticAverageScore;
-        private Button btnGenerateSummary;
-        private Label outputAnimalID;
+        private Button btnStatistics;
+        private Label label1;
     }
 
 }
