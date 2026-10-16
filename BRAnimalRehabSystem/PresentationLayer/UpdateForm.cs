@@ -14,6 +14,7 @@ namespace BRAnimalRehabSystem.PresentationLayer
     public partial class UpdateForm : Form
     {
         UpdateLogic logic=new UpdateLogic();
+        Animal editAnimal = null;
         public UpdateForm()
         {
             InitializeComponent();
@@ -21,7 +22,6 @@ namespace BRAnimalRehabSystem.PresentationLayer
 
         private void btnFill_Click(object sender, EventArgs e)
         {
-            Animal editAnimal = null;
             editAnimal = logic.FillData(txtID.Text);
             if (editAnimal != null)
             {
@@ -30,12 +30,12 @@ namespace BRAnimalRehabSystem.PresentationLayer
                 label4.Visible = true;
                 label5.Visible = true;
                 txtAge.Visible = true;
-                txtAge.Text = editAnimal.AnimalAge.ToString();
                 txtAnimal.Visible = true;
-                txtAnimal.Text = editAnimal.AnimalSpecies;
                 txtName.Visible = true;
-                txtName.Text = editAnimal.AnimalName;
                 txtRecoveryScore.Visible = true;
+                txtName.Text = editAnimal.AnimalName;
+                txtAnimal.Text = editAnimal.AnimalSpecies;
+                txtAge.Text = editAnimal.AnimalAge.ToString();
                 txtRecoveryScore.Text = editAnimal.AnimalRecoveryScore.ToString();
             }
             else
@@ -46,7 +46,23 @@ namespace BRAnimalRehabSystem.PresentationLayer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            Animal old = editAnimal;
+            editAnimal.AnimalAge = int.Parse(txtAge.Text);
+            editAnimal.AnimalSpecies = txtAnimal.Text;
+            editAnimal.AnimalName = txtName.Text;
+            editAnimal.AnimalRecoveryScore=int.Parse(txtRecoveryScore.Text);
+            if (logic.Update(old, editAnimal))
+            {
+                label2.Visible = true;
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                txtAge.Visible = true;
+                txtAnimal.Visible = true;
+                txtName.Visible = true;
+                txtRecoveryScore.Visible = true;
+                txtID.Text = "";
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
