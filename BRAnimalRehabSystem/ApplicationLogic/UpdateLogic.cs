@@ -30,5 +30,13 @@ namespace BRAnimalRehabSystem.ApplicationLogic
             }
             return returner;
         }
+
+        public bool Update(Animal oldAnimal,Animal newAnimal)
+        {
+            int i=animals.IndexOf(oldAnimal);
+            animals.RemoveAt(i);
+            animals.Insert(i,newAnimal);
+            return handler.SaveAnimalList(@"C:\Users\BC-STUDENT\Downloads\BRAnimalRehabSystem\BRAnimalRehabSystem\DataLayer\animals.txt", animals);
+        }
     }
 }
