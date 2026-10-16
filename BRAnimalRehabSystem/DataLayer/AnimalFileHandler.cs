@@ -51,5 +51,74 @@ namespace BRAnimalRehabSystem.DataLayer
                 return null;
             }
         }
+        public bool SaveAnimalList(string animalsTxtPath, List<Animal> animalList)
+        {
+            List<string> lines = new List<string>();
+            bool range = false;
+            try
+            {
+                foreach (Animal animal in animalList)
+                {
+                    int score = animal.AnimalRecoveryScore;
+                    if (score >= 0 && score <= 100)
+                    {
+                        if (score <= 20)
+                        {
+                            animal.AnimalHousing = "Intensive Care Unit";
+                            animal.AnimalStatus = "Critical";
+                        }
+                        else
+                        {
+                            if (score <= 40)
+                            {
+                                animal.AnimalHousing = "High-Dependency Ward";
+                                animal.AnimalStatus = "Serious";
+                            }
+                            else
+                            {
+                                if (score <= 60)
+                                {
+                                    animal.AnimalHousing = "Recovery Ward";
+                                    animal.AnimalStatus = "Stable";
+                                }
+                                else
+                                {
+                                    if (score <= 80)
+                                    {
+                                        animal.AnimalHousing = "Outdoor Enclosure";
+                                        animal.AnimalStatus = "Recovering";
+                                    }
+                                    else
+                                    {
+                                        animal.AnimalHousing = "Pre-Release Camp";
+                                        animal.AnimalStatus = "Release-Ready";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Recovery score outside the 0-100 range");
+                        range = true;
+                    }
+                    lines.Add($"{animal.AnimalID}|{animal.AnimalName}|{animal.AnimalSpecies}|{animal.AnimalAge}|{animal.AnimalRecoveryScore}|{animal.AnimalStatus}|{animal.AnimalHousing}");
+                }
+                if (!range)
+                {
+                    File.WriteAllLines(animalsTxtPath, lines);
+                }
+                else
+                {
+                    MessageBox.Show("Changes not saved due to error");
+                }
+                return !range;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Error happened at SavenimalList Method:\n" + exc.Message);
+                return range;
+            }
+        }
     }
 }
