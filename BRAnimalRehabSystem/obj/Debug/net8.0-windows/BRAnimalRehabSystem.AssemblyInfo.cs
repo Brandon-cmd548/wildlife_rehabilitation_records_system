@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BRAnimalRehabSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70baf794f937d2cfa0eb5fd7ac0c8f8e9e8c2a33")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20ea69f5a40cc7d735d85018d7804009c5335371")]
 [assembly: System.Reflection.AssemblyProductAttribute("BRAnimalRehabSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BRAnimalRehabSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
