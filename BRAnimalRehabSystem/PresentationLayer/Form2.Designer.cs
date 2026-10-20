@@ -259,6 +259,7 @@
             Controls.Add(label2);
             Name = "frmDeleteForm";
             Text = "Delete Animal Form";
+            FormClosed += frmDeleteForm_FormClosed;
             Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDeleteSelectedAnimal).EndInit();
             ResumeLayout(false);

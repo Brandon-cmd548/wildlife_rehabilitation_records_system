@@ -51,7 +51,6 @@
             lblGenerateStatusStable = new Label();
             lblGenerateStatusSerious = new Label();
             lblGenerateStatusCritical = new Label();
-            btnDownloadSummary = new Button();
             btnBackStatistics = new Button();
             btnSaveSummary = new Button();
             SuspendLayout();
@@ -275,15 +274,6 @@
             lblGenerateStatusCritical.TabIndex = 22;
             lblGenerateStatusCritical.Text = "[ ]";
             // 
-            // btnDownloadSummary
-            // 
-            btnDownloadSummary.Location = new Point(524, 463);
-            btnDownloadSummary.Name = "btnDownloadSummary";
-            btnDownloadSummary.Size = new Size(129, 62);
-            btnDownloadSummary.TabIndex = 23;
-            btnDownloadSummary.Text = "Download Summary";
-            btnDownloadSummary.UseVisualStyleBackColor = true;
-            // 
             // btnBackStatistics
             // 
             btnBackStatistics.Location = new Point(694, 9);
@@ -311,7 +301,6 @@
             ClientSize = new Size(800, 531);
             Controls.Add(btnSaveSummary);
             Controls.Add(btnBackStatistics);
-            Controls.Add(btnDownloadSummary);
             Controls.Add(lblGenerateStatusCritical);
             Controls.Add(lblGenerateStatusSerious);
             Controls.Add(lblGenerateStatusStable);
@@ -368,7 +357,6 @@
         private Label lblGenerateStatusStable;
         private Label lblGenerateStatusSerious;
         private Label lblGenerateStatusCritical;
-        private Button btnDownloadSummary;
         private Button btnBackStatistics;
         private Button btnSaveSummary;
     }

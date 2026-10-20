@@ -20,17 +20,20 @@ namespace BRAnimalRehabSystem.PresentationLayer
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            MainForm frm = new MainForm();
+
             this.Close();
+            frm.Show();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SearchLogic handler= new SearchLogic();
+            SearchLogic handler = new SearchLogic();
             Animal list = null;
-            list=handler.Search(txtID.Text);
-            BindingSource source= new BindingSource();
-            source.DataSource=list;
-            dgvSearch.DataSource=source;
+            list = handler.Search(txtID.Text);
+            BindingSource source = new BindingSource();
+            source.DataSource = list;
+            dgvSearch.DataSource = source;
         }
     }
 }

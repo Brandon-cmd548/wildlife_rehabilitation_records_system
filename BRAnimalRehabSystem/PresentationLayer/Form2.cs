@@ -17,13 +17,23 @@ namespace BRAnimalRehabSystem.PresentationLayer
 
         AnimalFileHandler animalFileHandler = new AnimalFileHandler();
         List<Animal> animals;
-        string animalDataPath = @"C:\Users\Cactu\OneDrive - belgiumcampus.ac.za\Belgium College Work\2nd Year 120 Credits\Semester 2\PRG282\wildlife_rehabilitation_records_system\BRAnimalRehabSystem\DataLayer\animals.txt";
+        string animalDataPath = @"C:\Users\Cactu\OneDrive - belgiumcampus.ac.za\Belgium College Work\2nd Year 120 Credits\Semester 2\PRG282\Project\BRAnimalRehabSystem\DataLayer\animals.txt";
 
         int indexRow;
         public frmDeleteForm()
         {
             InitializeComponent();
             animals = animalFileHandler.LoadAnimalList(animalDataPath);
+        }
+        public void ClearLabels()
+        {
+            lblDeleteAnimalID.Text = "[ ]";
+            lblDeleteAnimalName.Text = "[ ]";
+            lblDeleteAnimalSpecies.Text = "[ ]";
+            lblDeleteAnimalAge.Text = "[ ]";
+            lblDeleteAnimalRecoveryScore.Text = "[ ]";
+            lblDeleteAnimalStatus.Text = "[ ]";
+            lblDeleteAnimalHousing.Text = "[ ]";
         }
 
         public void LoadDataGridView()
@@ -40,7 +50,7 @@ namespace BRAnimalRehabSystem.PresentationLayer
 
         private void btnBackToForm1_Click(object sender, EventArgs e)
         {
-            Form1 frm1 = new Form1();
+            MainForm frm1 = new MainForm();
 
             this.Hide();
             frm1.Show();
@@ -80,13 +90,21 @@ namespace BRAnimalRehabSystem.PresentationLayer
 
                 LoadDataGridView();
                 animalFileHandler.SaveAnimalList(animalDataPath, animals);
+
+                ClearLabels();
             }
             catch (Exception exc)
             {
                 MessageBox.Show("An unexpected error occured and the animal was not deleted: \n" + exc.Message);
+                ClearLabels();
             }
         }
 
-        
+        private void frmDeleteForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MainForm frm = new MainForm();
+
+            frm.Show();
+        }
     }
 }

@@ -47,20 +47,20 @@
             // 
             // txtRecoveryScore
             // 
-            txtRecoveryScore.Location = new Point(354, 190);
-            txtRecoveryScore.Margin = new Padding(4, 3, 4, 3);
+            txtRecoveryScore.Location = new Point(405, 253);
+            txtRecoveryScore.Margin = new Padding(5, 4, 5, 4);
             txtRecoveryScore.Name = "txtRecoveryScore";
-            txtRecoveryScore.Size = new Size(116, 23);
+            txtRecoveryScore.Size = new Size(132, 27);
             txtRecoveryScore.TabIndex = 14;
             txtRecoveryScore.Visible = false;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(135, 194);
-            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Location = new Point(154, 259);
+            label5.Margin = new Padding(5, 0, 5, 0);
             label5.Name = "label5";
-            label5.Size = new Size(87, 15);
+            label5.Size = new Size(110, 20);
             label5.TabIndex = 7;
             label5.Text = "Recovery Score";
             label5.Visible = false;
@@ -68,20 +68,20 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(135, 164);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new Point(154, 219);
+            label4.Margin = new Padding(5, 0, 5, 0);
             label4.Name = "label4";
-            label4.Size = new Size(28, 15);
+            label4.Size = new Size(36, 20);
             label4.TabIndex = 6;
             label4.Text = "Age";
             label4.Visible = false;
             // 
             // btnFill
             // 
-            btnFill.Location = new Point(142, 302);
-            btnFill.Margin = new Padding(4, 3, 4, 3);
+            btnFill.Location = new Point(162, 403);
+            btnFill.Margin = new Padding(5, 4, 5, 4);
             btnFill.Name = "btnFill";
-            btnFill.Size = new Size(113, 37);
+            btnFill.Size = new Size(129, 49);
             btnFill.TabIndex = 5;
             btnFill.Text = "Fill Information";
             btnFill.UseVisualStyleBackColor = true;
@@ -89,10 +89,10 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(428, 302);
-            btnExit.Margin = new Padding(4, 3, 4, 3);
+            btnExit.Location = new Point(489, 403);
+            btnExit.Margin = new Padding(5, 4, 5, 4);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(113, 37);
+            btnExit.Size = new Size(129, 49);
             btnExit.TabIndex = 4;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
@@ -101,10 +101,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(135, 134);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(154, 179);
+            label3.Margin = new Padding(5, 0, 5, 0);
             label3.Name = "label3";
-            label3.Size = new Size(45, 15);
+            label3.Size = new Size(56, 20);
             label3.TabIndex = 3;
             label3.Text = "Animal";
             label3.Visible = false;
@@ -112,10 +112,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(135, 104);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(154, 139);
+            label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(39, 15);
+            label2.Size = new Size(49, 20);
             label2.TabIndex = 2;
             label2.Text = "Name";
             label2.Visible = false;
@@ -123,19 +123,19 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(135, 74);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(154, 99);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(18, 15);
+            label1.Size = new Size(24, 20);
             label1.TabIndex = 1;
             label1.Text = "ID";
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(281, 302);
-            btnUpdate.Margin = new Padding(4, 3, 4, 3);
+            btnUpdate.Location = new Point(321, 403);
+            btnUpdate.Margin = new Padding(5, 4, 5, 4);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(113, 37);
+            btnUpdate.Size = new Size(129, 49);
             btnUpdate.TabIndex = 0;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -156,56 +156,57 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(btnUpdate);
-            groupBox1.Location = new Point(13, 12);
-            groupBox1.Margin = new Padding(4, 3, 4, 3);
+            groupBox1.Location = new Point(15, 16);
+            groupBox1.Margin = new Padding(5, 4, 5, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4, 3, 4, 3);
-            groupBox1.Size = new Size(774, 426);
+            groupBox1.Padding = new Padding(5, 4, 5, 4);
+            groupBox1.Size = new Size(885, 568);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Update";
             // 
             // txtAge
             // 
-            txtAge.Location = new Point(354, 160);
-            txtAge.Margin = new Padding(4, 3, 4, 3);
+            txtAge.Location = new Point(405, 213);
+            txtAge.Margin = new Padding(5, 4, 5, 4);
             txtAge.Name = "txtAge";
-            txtAge.Size = new Size(116, 23);
+            txtAge.Size = new Size(132, 27);
             txtAge.TabIndex = 13;
             txtAge.Visible = false;
             // 
             // txtAnimal
             // 
-            txtAnimal.Location = new Point(354, 130);
-            txtAnimal.Margin = new Padding(4, 3, 4, 3);
+            txtAnimal.Location = new Point(405, 173);
+            txtAnimal.Margin = new Padding(5, 4, 5, 4);
             txtAnimal.Name = "txtAnimal";
-            txtAnimal.Size = new Size(116, 23);
+            txtAnimal.Size = new Size(132, 27);
             txtAnimal.TabIndex = 12;
             txtAnimal.Visible = false;
             // 
             // txtName
             // 
-            txtName.Location = new Point(354, 100);
-            txtName.Margin = new Padding(4, 3, 4, 3);
+            txtName.Location = new Point(405, 133);
+            txtName.Margin = new Padding(5, 4, 5, 4);
             txtName.Name = "txtName";
-            txtName.Size = new Size(116, 23);
+            txtName.Size = new Size(132, 27);
             txtName.TabIndex = 11;
             txtName.Visible = false;
             // 
             // txtID
             // 
-            txtID.Location = new Point(354, 70);
-            txtID.Margin = new Padding(4, 3, 4, 3);
+            txtID.Location = new Point(405, 93);
+            txtID.Margin = new Padding(5, 4, 5, 4);
             txtID.Name = "txtID";
-            txtID.Size = new Size(116, 23);
+            txtID.Size = new Size(132, 27);
             txtID.TabIndex = 10;
             // 
             // UpdateForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(groupBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "UpdateForm";
             Text = "UpdateForm";
             groupBox1.ResumeLayout(false);

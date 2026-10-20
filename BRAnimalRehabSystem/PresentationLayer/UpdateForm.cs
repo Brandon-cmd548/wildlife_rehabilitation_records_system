@@ -13,7 +13,7 @@ namespace BRAnimalRehabSystem.PresentationLayer
 {
     public partial class UpdateForm : Form
     {
-        UpdateLogic logic=new UpdateLogic();
+        UpdateLogic logic = new UpdateLogic();
         Animal editAnimal = null;
         public UpdateForm()
         {
@@ -50,7 +50,7 @@ namespace BRAnimalRehabSystem.PresentationLayer
             editAnimal.AnimalAge = int.Parse(txtAge.Text);
             editAnimal.AnimalSpecies = txtAnimal.Text;
             editAnimal.AnimalName = txtName.Text;
-            editAnimal.AnimalRecoveryScore=int.Parse(txtRecoveryScore.Text);
+            editAnimal.AnimalRecoveryScore = int.Parse(txtRecoveryScore.Text);
             if (logic.Update(old, editAnimal))
             {
                 label2.Visible = true;
@@ -67,6 +67,9 @@ namespace BRAnimalRehabSystem.PresentationLayer
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            MainForm frm = new MainForm();
+
+            frm.Show();
             this.Close();
         }
     }

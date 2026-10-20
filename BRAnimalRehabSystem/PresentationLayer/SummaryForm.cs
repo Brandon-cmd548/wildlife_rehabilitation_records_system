@@ -19,7 +19,7 @@ namespace BRAnimalRehabSystem.PresentationLayer
     {
         AnimalFileHandler animalFileHandler = new AnimalFileHandler();
         List<Animal> animals;
-        string animalDataPath = @"C:\Users\Cactu\OneDrive - belgiumcampus.ac.za\Belgium College Work\2nd Year 120 Credits\Semester 2\PRG282\wildlife_rehabilitation_records_system\BRAnimalRehabSystem\DataLayer\animals.txt";
+        string animalDataPath = @"C:\Users\Cactu\OneDrive - belgiumcampus.ac.za\Belgium College Work\2nd Year 120 Credits\Semester 2\PRG282\Project\BRAnimalRehabSystem\DataLayer\animals.txt";
         string summaryDataPath = @"AnimalSummary.txt";
 
         public SummaryForm()
@@ -83,7 +83,7 @@ namespace BRAnimalRehabSystem.PresentationLayer
 
         private void btnBackStatistics_Click(object sender, EventArgs e)
         {
-            Form1 frm1 = new Form1();
+            MainForm frm1 = new MainForm();
 
             this.Hide();
             frm1.Show();
@@ -117,7 +117,7 @@ namespace BRAnimalRehabSystem.PresentationLayer
 
         private void SummaryForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form1 frm1 = new Form1();
+            MainForm frm1 = new MainForm();
             frm1.Show();
         }
     }

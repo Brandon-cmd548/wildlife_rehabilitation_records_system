@@ -13,7 +13,7 @@ namespace BRAnimalRehabSystem.ApplicationLogic
         AnimalFileHandler handler=new AnimalFileHandler();
         public UpdateLogic()
         {
-            animals = handler.LoadAnimalList(@"C:\Users\BC-STUDENT\Downloads\BRAnimalRehabSystem\BRAnimalRehabSystem\DataLayer\animals.txt");
+            animals = handler.LoadAnimalList(@"C:\Users\Cactu\OneDrive - belgiumcampus.ac.za\Belgium College Work\2nd Year 120 Credits\Semester 2\PRG282\Project\BRAnimalRehabSystem\DataLayer\animals.txt");
         }
 
         public Animal FillData(string id)
@@ -36,7 +36,7 @@ namespace BRAnimalRehabSystem.ApplicationLogic
             int i=animals.IndexOf(oldAnimal);
             animals.RemoveAt(i);
             animals.Insert(i,newAnimal);
-            return handler.SaveAnimalList(@"C:\Users\BC-STUDENT\Downloads\BRAnimalRehabSystem\BRAnimalRehabSystem\DataLayer\animals.txt", animals);
+            return handler.SaveAnimalList(@"C:\Users\Cactu\OneDrive - belgiumcampus.ac.za\Belgium College Work\2nd Year 120 Credits\Semester 2\PRG282\Project\BRAnimalRehabSystem\DataLayer\animals.txt", animals);
         }
     }
 }
