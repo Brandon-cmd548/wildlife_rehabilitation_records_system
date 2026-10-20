@@ -71,13 +71,12 @@ namespace BRAnimalRehabSystem.DataLayer
                 return null;
             }
         }
-
-        public void SaveAnimalList(string animalsTxtPath, List<Animal> animalList)
+        public bool SaveAnimalList(string animalsTxtPath, List<Animal> animalList)
         {
+            List<string> lines = new List<string>();
+            bool range = false;
             try
             {
-                List<string> lines = new List<string>();
-                bool range = false;
                 foreach (Animal animal in animalList)
                 {
                     int score = animal.AnimalRecoveryScore;
@@ -133,10 +132,12 @@ namespace BRAnimalRehabSystem.DataLayer
                 {
                     MessageBox.Show("Changes not saved due to error");
                 }
+                return !range;
             }
             catch (Exception exc)
             {
                 MessageBox.Show("Error happened at SavenimalList Method:\n" + exc.Message);
+                return range;
             }
         }
     }
