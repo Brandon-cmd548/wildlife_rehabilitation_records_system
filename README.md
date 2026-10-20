@@ -79,9 +79,9 @@ The project follows a clean **Layered Architecture**:
 
 | Team Member | Primary Responsibilities | Contact & Links |
 | :--- | :--- | :--- |
-| **Brandon Zander Purcell** | • Delete Animal Feature<br>• Summary Report Generation<br> | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/REPLACE-BRANDON-LINKEDIN) [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/REPLACE-BRANDON-GITHUB) |
-| **Naledi Mnisi** | • Add Animal Feature<br>• Animal Registration Workflow | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/REPLACE-NALEDI-LINKEDIN) [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/REPLACE-NALEDI-GITHUB) |
-| **Ethan Wood** | • Search Animal Feature<br>• Update Animal Feature | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/REPLACE-ETHAN-LINKEDIN) [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/REPLACE-ETHAN-GITHUB) |
+| **Brandon Zander Purcell (604838)** | • Delete Animal Feature<br>• Summary Report Generation<br> | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/REPLACE-BRANDON-LINKEDIN) [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/REPLACE-BRANDON-GITHUB) |
+| **Naledi Mnisi (603501)** | • Add Animal Feature<br>• Animal Registration Workflow | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/REPLACE-NALEDI-LINKEDIN) [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/REPLACE-NALEDI-GITHUB) |
+| **Ethan Wood (603709)** | • Search Animal Feature<br>• Update Animal Feature | [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/REPLACE-ETHAN-LINKEDIN) [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github)](https://github.com/REPLACE-ETHAN-GITHUB) |
 
 ---
 
