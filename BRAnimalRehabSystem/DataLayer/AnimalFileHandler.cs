@@ -34,8 +34,28 @@ namespace BRAnimalRehabSystem.DataLayer
                         continue;
                     }
 
+                    if (int.TryParse(lineSpliter[3], out int animalAge))
+                    {
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Text doc has bad data, pls go fix line: {line}, {lineSpliter[3]}");
+                        continue;
+                    }
+
+                    if (int.TryParse(lineSpliter[4], out int animalRecoveryScore))
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Text doc has bad data, pls go fix line: {line}, {lineSpliter[4]}");
+                        continue;
+                    }
+
                     // 2. I 604838 was taught the code below by an AI 
-                    Animal animal = new Animal(lineSpliter[0], lineSpliter[1], lineSpliter[2], int.Parse(lineSpliter[3]), int.Parse(lineSpliter[4]), lineSpliter[5], lineSpliter[6]);
+                    Animal animal = new Animal(lineSpliter[0], lineSpliter[1], lineSpliter[2], animalAge, animalRecoveryScore, lineSpliter[5], lineSpliter[6]);
                     // 2. I 604838 was taught the code above by an AI 
 
                     animalList.Add(animal);
